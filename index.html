@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="./style.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Pen</title> 
+  
+
+</head> 
+<body> 
+
+  <!-- 1. START/WELCOME PAGE -->
+  <div class="greeting"> 
+    <h1>Welcome my love &hearts;</h1> 
+    <h2>You are formally invited...</h2> 
+    
+    <!-- Trigger Link -->
+    <a href="javascript:void(0)" onclick="openInvitation()" class="join-link"> 
+      Join me 
+    </a> 
+    
+  </div> 
+
+  <!-- 2. FULL-SCREEN INVITATION OVERLAY (Hidden by default until clicked) -->
+  <div id="invitationOverlay" class="overlay-page">
+    <div id="heartsContainer" class="hearts-container"></div>
+    <!-- Elegant Card Content Panel -->
+    <div class="invitation-card">
+      <h1 class="invitation-title">You're Invited</h1>
+      <p class="invitation-text">To embrace a beautiful moment with me.</p>
+      <!-- Put this inside your .invitation-card block -->
+
+
+
+
+      
+      <!-- Event details placeholder -->
+      <div class="event-details">
+        <p>Monday, June 8th • </p>
+        <p>Jon Batiste's Jazz Club
+at Baha Mar</p>
+      </div>
+
+      <!-- Close/Back Button -->
+      <button onclick="closeInvitation()" class="close-btn">Close Invitation</button>
+    </div>
+
+  </div>
+
+  
+
+  <script src="./script.js"></script> 
+  <audio id="jazzMusic" loop preload="auto">
+  <source src="https://wikimedia.org" type="audio/ogg">
+  <source src="https://soundhelix.com" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+</body> 
+</html>
