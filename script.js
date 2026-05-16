@@ -6,18 +6,19 @@ function openInvitation() {
   // 2. Fire the heart confetti sequence burst
   startHeartConfetti();
 
-  // 3. Locate and safely trigger the jazz music track
+  // 3. Target the HTML element player natively
   var music = document.getElementById("jazzMusic");
   
-  // Sets volume comfortably at 70% so it doesn't startle your guests
-  music.volume = 0.7; 
-  
-  // Force browser focus to play the track file
-  music.play().then(() => {
-    console.log("Jazz music stream initialized successfully.");
-  }).catch(function(error) {
-    console.log("Playback blocked by browser autoplay rules:", error);
-  });
+  if (music) {
+    music.volume = 0.6; // Sets a pleasant background audio balance
+    
+    // Force browser activation
+    music.play().then(() => {
+      console.log("Jazz music stream initialized successfully on GitHub!");
+    }).catch(function(error) {
+      console.log("Autoplay context state block defense active:", error);
+    });
+  }
 } 
 
 function startHeartConfetti() {
@@ -50,11 +51,11 @@ function closeInvitation() {
   var overlay = document.getElementById("invitationOverlay"); 
   overlay.classList.remove("active"); 
   
-  // Wipe out the falling elements to conserve processor memory
   document.getElementById("heartsContainer").innerHTML = "";
 
-  // Pause the jazz music if they exit the invitation card view
+  // Pause the music track if they exit the invitation view
   var music = document.getElementById("jazzMusic");
-  music.pause();
+  if (music) {
+    music.pause();
+  }
 }
-
